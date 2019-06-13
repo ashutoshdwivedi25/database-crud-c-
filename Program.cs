@@ -32,7 +32,7 @@ namespace Database
         private static int GetModel (ConnectionFactory<IOptions<ConnectionStringOption>> connectionFactory)
         {
             string cmd = @"insert into training.Classxy(place,payscale)
-                         VALUES('uytiu',12369);";
+                         VALUES('irute',56465);";
             using (var con = connectionFactory.GetMasterConnection ().Result)
             {
                 return (con.Connection.Execute(cmd));
@@ -40,7 +40,7 @@ namespace Database
         }
         private static List<Model> GetModel1 (ConnectionFactory<IOptions<ConnectionStringOption>> connectionFactory)
         {
-            string cmd = @"select place from training.Classxy where classid = 5";
+            string cmd = @"select place from training.Classxy where classid = 6";
             using (var con = connectionFactory.GetReadOnlyConnection ().Result)
             {
                 return (con.Connection.Query<Model> (cmd).ToList () ?? new List<Model> ());
