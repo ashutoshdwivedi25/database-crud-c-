@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AEPLCore.Utils</id>
+    <version>1.0.4</version>
+    <authors>AEPLCore.Utils</authors>
+    <owners>AEPLCore.Utils</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Added client tracker</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="Google.Protobuf" version="3.5.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="Google.Protobuf" version="3.5.1" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="Google.Protobuf" version="3.5.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.5.1, .NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.5.1, .NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

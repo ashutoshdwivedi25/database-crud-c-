@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AEPLCore.DataAccess</id>
+    <version>1.2.3</version>
+    <authors>AEPLCore.DataAccess</authors>
+    <owners>AEPLCore.DataAccess</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Refactor the code</description>
+    <releaseNotes>1.2.3
+--------
+ Published purge invalid lib in repo
+1.2.2
+-------------
+Fix: added namespace to ConnStrRepo class 
+
+1.2.1
+-------------
+Fix config reset issue, use conStr map for master and readonly also</releaseNotes>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="AEPLCore.DataAccess.Contracts" version="1.2.0" exclude="Build,Analyzers" />
+        <dependency id="AEPLCore.Logging" version="1.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="MySqlConnector" version="0.40.2" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="4.4.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\Database.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\Database.csproj",
+        "projectName": "Database",
+        "projectPath": "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\packages",
+        "outputPath": "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ashutosh.dwivedi\\Downloads\\Database\\NuGet.Config",
+          "C:\\Users\\ashutosh.dwivedi\\Downloads\\NuGet.Config",
+          "C:\\Users\\ashutosh.dwivedi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "http://10.10.20.110:41111/nuget/": {},
+          "http://10.10.4.55:41111/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AEPLCore.DataAccess": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.50.4, )"
+            },
+            "Gelf4Net.UdpAppender": {
+              "target": "Package",
+              "version": "[1.0.0.11, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AEPLCore.S3Operation</name>
+    </assembly>
+    <members>
+        <member name="T:AEPLCore.S3Operation.S3OperationLogic">
+            <summary>
+            Logic class to implement various operation to be performed on aws s3.
+            </summary>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.#cctor">
+            <summary>
+            constructor to initialize s3client, transfer utility and logger
+            </summary>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.ListingObjectsAsync(System.String)">
+            <summary>
+            Async method to list all objects from s3 bucket
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>key value pair list</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFileAsync(System.String,System.String,System.String)">
+            <summary>
+            Async method to upload a file to s3 using key and bucket name
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFileAsync(System.String,System.String,System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Async method to upload a file with meta data to s3 bucket
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="list">list of meta data information</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadDataStreamAsync(System.IO.MemoryStream,System.String,System.String)">
+            <summary>
+            Async method to upload data stream to s3 bucket with key
+            </summary>
+            <param name="stream">data stream</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFileAsDataStreamAsync(System.String,System.String,System.String)">
+            <summary>
+            Async method to upload file as a data stream on s3 bucket with key name
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.DeletingAnObjectAsync(System.String,System.String)">
+            <summary>
+            Async method to delete an object with keyname from s3 bucket
+            </summary>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.ReadingAnObjectAsync(System.String,System.String)">
+            <summary>
+            Async method to read an object as a stream from s3 bucket with key
+            </summary>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>data stream</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.ReadingAnObjectAsyncToString(System.String,System.String)">
+            <summary>
+            Async method to read an object as a stream from s3 bucket with key
+            </summary>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>data stream</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFile(System.String,System.String,System.String)">
+            <summary>
+            method to upload a file to s3 using key and bucket name
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFile(System.String,System.String,System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            method to upload a file with meta data to s3 bucket
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="list">list of meta data information</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadDataStream(System.IO.MemoryStream,System.String,System.String)">
+            <summary>
+            method to upload data stream to s3 bucket with key
+            </summary>
+            <param name="stream">data stream</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3OperationLogic.UploadFileAsDataStream(System.String,System.String,System.String)">
+            <summary>
+            method to upload file as a data stream on s3 bucket with key name
+            </summary>
+            <param name="filePath">file path which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="T:AEPLCore.S3Operation.S3Client">
+            <summary>
+            A wrapper singleton client for doing s3 operations.
+            </summary>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.#ctor(System.String,System.String)">
+            <summary>
+            Private constructor for singleton instance
+            </summary>
+            <param name="AwsAccessKey">aws access key</param>
+            <param name="AwsSecretKey">aws secret key</param>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.Instance(System.String,System.String)">
+            <summary>
+            Method to create an instance of client. This does not requires params on staging and production env.
+            Only instantiate with params while testing on local env.
+            </summary>
+            <param name="AwsAccessKey">aws access key required for local env only</param>
+            <param name="AwsSecretKey">aws secret key required for local env only</param>
+            <returns>singleton instance</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.ListingObjectsAsync(System.String)">
+            <summary>
+            Async Method to list objects from s3 with data size
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>key value pair list</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.DeletingAnObjectAsync(System.String,System.String)">
+            <summary>
+            Async method to delete an object from s3 bucket
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.ReadingAnObjectAsync(System.String,System.String)">
+            <summary>
+            Async method to read an object from a bucket with key
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>stream of data</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileWithKeyAsync(System.String,System.String,System.String)">
+            <summary>
+            Async method to upload a file to s3 using key name
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileWithMetaDataAsync(System.String,System.String,System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Async method to upload a file with meta data info of file
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="metaDataList">meta data information in form of list</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadDataStreamAsync(System.IO.MemoryStream,System.String,System.String)">
+            <summary>
+            Async method to upload a data stream to s3
+            </summary>
+            <param name="stream">data stream to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileAsDataStreamAsync(System.String,System.String,System.String)">
+            <summary>
+            Async method to upload a file by converting it to stream to s3
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.ListingObjects(System.String)">
+            <summary>
+            Method to list objects from s3 with data size
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <returns>key value pair list</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.DeletingAnObject(System.String,System.String)">
+            <summary>
+            method to delete an object from s3 bucket
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns></returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.ReadingAnObject(System.String,System.String)">
+            <summary>
+            method to read an object from a bucket with key
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>stream of data</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.ReadingAnObjectToString(System.String,System.String)">
+            <summary>
+            method to read an object from a bucket with key and return it as a string
+            </summary>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>stream of data</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileWithKey(System.String,System.String,System.String)">
+            <summary>
+            method to upload a file to s3 using key name
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileWithMetaData(System.String,System.String,System.String,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            method to upload a file with meta data info of file
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <param name="metaDataList">meta data information in form of list</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadDataStream(System.IO.MemoryStream,System.String,System.String)">
+            <summary>
+            method to upload a data stream to s3
+            </summary>
+            <param name="stream">data stream to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+        <member name="M:AEPLCore.S3Operation.S3Client.UploadFileAsDataStream(System.String,System.String,System.String)">
+            <summary>
+            method to upload a file by converting it to stream to s3
+            </summary>
+            <param name="filePath">file loaction which need to be uploaded</param>
+            <param name="bucketName">s3 bucket name</param>
+            <param name="keyName">s3 bucket key name</param>
+            <returns>true or false on success and failure</returns>
+        </member>
+    </members>
+</doc>
